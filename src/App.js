@@ -12,8 +12,13 @@ import Things from "./component/Things";
 import Review from "./component/Review";
 import ContactForm from "./component/Contact";
 import BookingRoom from "./Pages/BookingRoom";
+import Booked from "./Pages/Booked";
 
 const App = () => {
+  const [Id, setId] = React.useState(NaN);
+  const booking = () => {
+    setId(parseInt(Math.random() * 1000000));
+  };
   return (
     <div>
       <BrowserRouter>
@@ -29,8 +34,11 @@ const App = () => {
           <ContactForm />
         </Route>
 
-        <Route path="/bookrooms">
-          <BookingRoom />
+        <Route exact path="/bookrooms">
+          <BookingRoom booking={booking} />
+        </Route>
+        <Route path="/bookrooms/bookingcompleted">
+          <Booked Id={Id} />
         </Route>
       </BrowserRouter>
     </div>

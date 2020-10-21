@@ -1,0 +1,45 @@
+.section {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.img {
+  border-radius: 10px;
+}
+.img:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.booked-page {
+  background-image: linear-gradient(
+    to top,
+    #fdcbf1 0%,
+    #fdcbf1 1%,
+    #e6dee9 100%
+  );
+}
+.booked-page {
+  background-color: rgba(0, 0, 0, 0.22);
+  display: flex;
+  position: relative;
+  top: 30vh;
+  left: 20vw;
+  flex-direction: column;
+  width: 50vw;
+  height: 40vh;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 10px;
+}
+.booked-page p {
+  font-size: 20px;
+  font-family: cursive;
+}
+@media screen and (max-width: 872px) {
+  .booked-page {
+    top: 10vh;
+    left: 10vw;
+    width: 60vw;
+    height: 40vh;
+  }
+}

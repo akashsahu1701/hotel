@@ -37,7 +37,9 @@ const Navbar = () => {
           <a href="#Contact">CONTACT</a>
         </li>
         <button className="btn-nav">
-          <Link to="/bookrooms">Book Room</Link>
+          <Link to="/bookrooms">
+            <span>Book Room</span>
+          </Link>
         </button>
         {show ? (
           <button className="btn-icon" onClick={handleNavbar}>

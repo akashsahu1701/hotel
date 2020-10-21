@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import img from "../img.jpg";
 import RenderApp from "./Counter.js";
 
@@ -30,8 +31,10 @@ const Home = () => {
             <RenderApp />
           </div>
           <div className="form-group">
-            <button type="submit" className="btn">
-              Search
+            <button type="submit" className="button">
+              <Link to="/bookrooms">
+                <span>Search</span>
+              </Link>
             </button>
           </div>
         </div>
