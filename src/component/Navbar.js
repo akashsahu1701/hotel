@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import NavModal from "./Modal";
 import {
   AiOutlineMenu as IconA,
@@ -35,7 +36,9 @@ const Navbar = () => {
         <li>
           <a href="#Contact">CONTACT</a>
         </li>
-        <button className="btn-nav">Book Room</button>
+        <button className="btn-nav">
+          <Link to="/bookrooms">Book Room</Link>
+        </button>
         {show ? (
           <button className="btn-icon" onClick={handleNavbar}>
             <IconA />

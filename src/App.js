@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 import "./index.css";
 
 import Navbar from "./component/Navbar";
@@ -10,19 +11,28 @@ import Gallery from "./component/Gallery";
 import Things from "./component/Things";
 import Review from "./component/Review";
 import ContactForm from "./component/Contact";
+import BookingRoom from "./Pages/BookingRoom";
 
 const App = () => {
   return (
     <div>
-      <Navbar />
-      <Home />
-      <AboutUs />
-      <Rooms />
-      <Services />
-      <Gallery />
-      <Things />
-      <Review />
-      <ContactForm />
+      <BrowserRouter>
+        <Route exact path="/">
+          <Navbar />
+          <Home />
+          <AboutUs />
+          <Rooms />
+          <Services />
+          <Gallery />
+          <Things />
+          <Review />
+          <ContactForm />
+        </Route>
+
+        <Route path="/bookrooms">
+          <BookingRoom />
+        </Route>
+      </BrowserRouter>
     </div>
   );
 };
